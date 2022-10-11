@@ -1,24 +1,21 @@
 class Animal
-  # def make_noise
+
+  # attr_reader :noise
+  # attr_writer :noise
+  # if we've both attr_reader and attr_writer, we can use attr_accessor
+  attr_accessor :noise
+
+  # same as attr_reader
+  # def noise
   #   @noise
   # end
 
-  # def set_noise
-  #   @noise = "Mewoo!"
+  # same as attr_writer
+  # def noise=(value)
+  #   @noise = value
   # end
 
-  # the class instance variables are only be accessible inside the instance of the class
-  # the class instance variables are not accessible outside the class
-
-  # One thing to note here below two methods have the same name 'noise', the ruby is smart enough to distinguish this syntactic suger
-
-  # it will work as getter or reader
-  def noise
-    @noise
-  end
-
-  # it will work as setter or writer
-  def noise=(value)
-    @noise = value
-  end
+  # instances calling their own methods
+  # - use self to reference the current instance from code inside the instance
+  # - add self when calling the writer methods(self.first_name = )
 end
