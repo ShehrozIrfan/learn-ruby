@@ -1,21 +1,13 @@
 class Animal
-
-  # attr_reader :noise
-  # attr_writer :noise
-  # if we've both attr_reader and attr_writer, we can use attr_accessor
   attr_accessor :noise
 
-  # same as attr_reader
-  # def noise
-  #   @noise
+  # def initialize
+  #   @noise = 'Mewoooww!!'
+  #   puts "Animal instantiated"
   # end
 
-  # same as attr_writer
-  # def noise=(value)
-  #   @noise = value
-  # end
-
-  # instances calling their own methods
-  # - use self to reference the current instance from code inside the instance
-  # - add self when calling the writer methods(self.first_name = )
+  # we can also pass options hash to initialize
+  def initialize(options={})
+    @noise = options[:noise] || "Bark...!"
+  end
 end
