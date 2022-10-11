@@ -1,18 +1,24 @@
 class Animal
-  def make_noise
-    # one thing to note here is that the class instance variables are always accessible in class methods.
-    # like we've created the @noise in set_noise method, but it can be accessible here in the method because it's instance variable.
-    @noise
+  # def make_noise
+  #   @noise
+  # end
 
-    # local variable won't be accessible here.
-    # noise
+  # def set_noise
+  #   @noise = "Mewoo!"
+  # end
+
+  # the class instance variables are only be accessible inside the instance of the class
+  # the class instance variables are not accessible outside the class
+
+  # One thing to note here below two methods have the same name 'noise', the ruby is smart enough to distinguish this syntactic suger
+
+  # it will work as getter or reader
+  def noise
+    @noise
   end
 
-  def set_noise
-    # here we set the instance variable value
-    @noise = "Mewoo!"
-
-    # below we created the local variable, which won't be accessible in make_noise method and throw error.
-    # noise = "Mewoo!"
+  # it will work as setter or writer
+  def noise=(value)
+    @noise = value
   end
 end
