@@ -1,14 +1,7 @@
 #! bin/usr/env ruby
 
-require_relative 'classes/animal'
-require_relative 'classes/cow'
-require_relative 'classes/cat'
+require_relative 'classes/amateur'
+require_relative 'classes/chef'
 
-generic = Animal.new
-puts generic.noise # returns nothing
-
-cow = Cow.new
-puts cow.noise
-
-cat = Cat.new
-puts cat.noise
+new_cook = Amateur.new
+new_cook.cook_food
